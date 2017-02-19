@@ -1,0 +1,10 @@
+G:\Visual Studio Workspace\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\Film Library.csprojResolveAssemblyReference.cache
+G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\CPP.CS.CS408.FilmLib.Form1.resources
+G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\CPP.CS.CS408.FilmLib.Properties.Resources.resources
+G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\Film Library.csproj.GenerateResource.Cache
+G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
