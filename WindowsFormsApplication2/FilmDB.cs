@@ -35,5 +35,10 @@ namespace CPP.CS.CS408.FilmLib
             }
             return null;
         }
+
+        public List<Film> GetFilms()
+        {
+            return films;
+        }
     }
 }

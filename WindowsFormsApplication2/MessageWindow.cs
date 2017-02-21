@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace CPP.CS.CS408.FilmLib
 {
-    public partial class Form1 : Form
+    public partial class MessageWindow : Form
     {
-        public Form1()
+        public MessageWindow(string Message)
         {
             InitializeComponent();
+            messageLabel.Text = Message;
         }
     }
 }
