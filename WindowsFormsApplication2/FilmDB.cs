@@ -14,6 +14,7 @@ namespace CPP.CS.CS408.FilmLib
         public FilmDB()
         {
             films = new List<Film>();
+            //Add(new Film("Pokemon", 5));
         }
 
         public void Add(Film film)

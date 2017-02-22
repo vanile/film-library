@@ -15,6 +15,7 @@ namespace CPP.CS.CS408.FilmLib
         public MessageWindow(string Message)
         {
             InitializeComponent();
+            this.CenterToScreen();
             messageLabel.Text = Message;
         }
     }

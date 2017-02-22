@@ -48,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(425, 128);
             this.Controls.Add(this.messageLabel);
             this.Name = "MessageWindow";
-            this.Text = "MessageWindow";
+            this.Text = "Message";
             this.ResumeLayout(false);
             this.PerformLayout();
 

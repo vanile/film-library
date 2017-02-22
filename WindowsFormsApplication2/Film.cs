@@ -8,9 +8,9 @@ namespace CPP.CS.CS408.FilmLib
 {
     class Film
     {
-        private string FilmName;
-        private int Rating;
-        private const int MAX_RATING = 5;
+        public string FilmName { get; set; }
+        public int Rating { get; set; }
+        private const int MAX_RATING = 10;
 
         public Film(string name, int rate)
         {
