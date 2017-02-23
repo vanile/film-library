@@ -16,19 +16,19 @@ namespace CPP.CS.CS408.FilmLib
             
         }
 
-        public void SaveToFile(FilmDB DBToStore, string FileName)
+        public void SaveToFile(SortableBindingList<Film> DBToStore, string FileName)
         {
-            XmlSerializer ser = new XmlSerializer(typeof(FilmDB));
-            var serializer = new XmlSerializer(typeof(FilmDB));
+            XmlSerializer ser = new XmlSerializer(typeof(SortableBindingList<Film>));
+            var serializer = new XmlSerializer(typeof(SortableBindingList<Film>));
             using (Stream str = File.Create(FileName))
                 ser.Serialize(str, DBToStore);
         }
 
-        public FilmDB LoadFromFile(string FileName)
+        public SortableBindingList<Film> LoadFromFile(string FileName)
         {
-            XmlSerializer ser = new XmlSerializer(typeof(FilmDB));
+            XmlSerializer ser = new XmlSerializer(typeof(SortableBindingList<Film>));
             using (Stream str = File.Open(FileName, FileMode.Open))
-                return (FilmDB)ser.Deserialize(str);
+                return (SortableBindingList<Film>)ser.Deserialize(str);
         }
     }
 }

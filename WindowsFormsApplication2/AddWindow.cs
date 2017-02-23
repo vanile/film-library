@@ -12,34 +12,48 @@ namespace CPP.CS.CS408.FilmLib
 {
     public partial class AddWindow : Form
     {
+        public Film film { get; set; }
+
         public AddWindow()
         {
             InitializeComponent();
             this.CenterToScreen();
         }
 
-        public AddWindow(string Name, int Rating)
+        public AddWindow(string Name, Film film)
         {
             InitializeComponent();
             this.CenterToScreen();
-            nameBox.Text = Name;
-            ratingBox.Text = Rating.ToString();
+
+            this.Text = Name;
+            nameBox.Text = film.FilmName;
+            ratingBox.Text = film.Rating.ToString();
         }
 
-        private void AddWindow_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(nameBox.Text) || string.IsNullOrWhiteSpace(ratingBox.Text))
+            if (string.IsNullOrWhiteSpace(nameBox.Text))
             {
-                new MessageWindow("One or more of the fields are empty.");
+                MessageBox.Show("Enter a name", "Error");
             }
-            int temp;
-            Int32.TryParse(ratingBox.Text, out temp);
-            Film nFilm = new Film(nameBox.Text, temp);
+            film.FilmName = nameBox.Text;
+            int rating;
+            Int32.TryParse(ratingBox.Text, out rating);
+            if (rating > 10 || rating < 0)
+            {
+                MessageBox.Show("Enter a valid rating", "Invalid Rating");
+            }
+            film.Rating = rating;
+        }
+
+        private void ratingBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
 
     }

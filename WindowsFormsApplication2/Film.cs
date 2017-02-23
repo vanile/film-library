@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CPP.CS.CS408.FilmLib
 {
-    class Film
+    public class Film
     {
         public string FilmName { get; set; }
         public int Rating { get; set; }
@@ -18,14 +18,6 @@ namespace CPP.CS.CS408.FilmLib
             Rating = rate;
         }
 
-        public string GetFilmName()
-        {
-            return FilmName;
-        }
-
-        public int GetRating()
-        {
-            return Rating;
-        }
+        public Film() { }
     }
 }

@@ -37,11 +37,12 @@
             // 
             // addBtn
             // 
+            this.addBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.addBtn.Location = new System.Drawing.Point(281, 529);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(97, 33);
             this.addBtn.TabIndex = 0;
-            this.addBtn.Text = "Add";
+            this.addBtn.Text = "OK";
             this.addBtn.UseVisualStyleBackColor = true;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
@@ -88,8 +89,8 @@
             this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.addBtn);
             this.Name = "AddWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Film";
-            this.Load += new System.EventHandler(this.AddWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

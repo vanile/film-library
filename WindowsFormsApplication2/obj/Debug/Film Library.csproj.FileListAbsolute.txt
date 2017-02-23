@@ -8,6 +8,5 @@ G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\
 G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\Film Library.csproj.GenerateResource.Cache
 G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
 G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
-G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\CPP.CS.CS408.FilmLib.MessageWindow.resources
 G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\CPP.CS.CS408.FilmLib.AboutBox.resources
 G:\Visual Studio Workspace\Projects\CS 408 Project\WindowsFormsApplication2\obj\Debug\CPP.CS.CS408.FilmLib.AddWindow.resources
