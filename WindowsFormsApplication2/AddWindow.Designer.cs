@@ -28,16 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.addBtn = new System.Windows.Forms.Button();
             this.nameLbl = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.TextBox();
             this.ratingLbl = new System.Windows.Forms.Label();
             this.ratingBox = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.finishLbl = new System.Windows.Forms.Label();
+            this.commentsLbl = new System.Windows.Forms.Label();
+            this.commentsBox = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // addBtn
             // 
-            this.addBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.addBtn.Location = new System.Drawing.Point(281, 529);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(97, 33);
@@ -77,20 +83,65 @@
             this.ratingBox.Name = "ratingBox";
             this.ratingBox.Size = new System.Drawing.Size(139, 22);
             this.ratingBox.TabIndex = 4;
+            this.ratingBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ratingBox_KeyPress_1);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(101, 141);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 5;
+            // 
+            // finishLbl
+            // 
+            this.finishLbl.AutoSize = true;
+            this.finishLbl.Location = new System.Drawing.Point(13, 145);
+            this.finishLbl.Name = "finishLbl";
+            this.finishLbl.Size = new System.Drawing.Size(79, 17);
+            this.finishLbl.TabIndex = 6;
+            this.finishLbl.Text = "Finish Date";
+            // 
+            // commentsLbl
+            // 
+            this.commentsLbl.AutoSize = true;
+            this.commentsLbl.Location = new System.Drawing.Point(16, 200);
+            this.commentsLbl.Name = "commentsLbl";
+            this.commentsLbl.Size = new System.Drawing.Size(74, 17);
+            this.commentsLbl.TabIndex = 7;
+            this.commentsLbl.Text = "Comments";
+            // 
+            // commentsBox
+            // 
+            this.commentsBox.Location = new System.Drawing.Point(101, 194);
+            this.commentsBox.Multiline = true;
+            this.commentsBox.Name = "commentsBox";
+            this.commentsBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.commentsBox.Size = new System.Drawing.Size(238, 64);
+            this.commentsBox.TabIndex = 8;
             // 
             // AddWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 583);
+            this.Controls.Add(this.commentsBox);
+            this.Controls.Add(this.commentsLbl);
+            this.Controls.Add(this.finishLbl);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.ratingBox);
             this.Controls.Add(this.ratingLbl);
             this.Controls.Add(this.nameBox);
             this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.addBtn);
+            this.MaximizeBox = false;
             this.Name = "AddWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Film";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +154,10 @@
         private System.Windows.Forms.TextBox nameBox;
         private System.Windows.Forms.Label ratingLbl;
         private System.Windows.Forms.TextBox ratingBox;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label finishLbl;
+        private System.Windows.Forms.TextBox commentsBox;
+        private System.Windows.Forms.Label commentsLbl;
     }
 }

@@ -14,10 +14,7 @@ namespace CPP.CS.CS408.FilmLib
         public AboutBox()
         {
             InitializeComponent();
-            this.Text = String.Format("About {0}", AssemblyTitle);
-            this.labelProductName.Text = AssemblyProduct;
-            this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
-            this.textBoxDescription.Text = AssemblyDescription;
+            this.CenterToScreen();
         }
 
         #region Assembly Attribute Accessors
@@ -99,5 +96,10 @@ namespace CPP.CS.CS408.FilmLib
             }
         }
         #endregion
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

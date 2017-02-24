@@ -27,8 +27,28 @@ namespace CPP.CS.CS408.FilmLib
         public SortableBindingList<Film> LoadFromFile(string FileName)
         {
             XmlSerializer ser = new XmlSerializer(typeof(SortableBindingList<Film>));
-            using (Stream str = File.Open(FileName, FileMode.Open))
-                return (SortableBindingList<Film>)ser.Deserialize(str);
+            try 
+            {
+                using (Stream str = File.Open(FileName, FileMode.Open))
+                    return (SortableBindingList<Film>)ser.Deserialize(str);
+            }
+            catch (FileNotFoundException e)
+            {
+
+            }
+            return null;
+        }
+
+        public void SaveToText(SortableBindingList<Film> bs, string fileName)
+        {
+            foreach (Film film in bs)
+            {
+                using (System.IO.StreamWriter write = new StreamWriter(fileName))
+                {
+                    write.WriteLine(film.FilmName);
+                    write.WriteLine("\t" + film.Rating);
+                }
+            }
         }
     }
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ArrayOfFilm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Film>
+    <FilmName>poked</FilmName>
+    <Rating>8</Rating>
+    <Comments>loooldxfc</Comments>
+  </Film>
+  <Film>
+    <FilmName>pokemon</FilmName>
+    <Rating>5</Rating>
+    <Comments>ha</Comments>
+  </Film>
+  <Film>
+    <FilmName>poker dogs</FilmName>
+    <Rating>1</Rating>
+    <Comments>sdf</Comments>
+  </Film>
+</ArrayOfFilm>

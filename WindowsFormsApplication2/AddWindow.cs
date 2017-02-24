@@ -18,6 +18,9 @@ namespace CPP.CS.CS408.FilmLib
         {
             InitializeComponent();
             this.CenterToScreen();
+            Console.WriteLine(
+            dateTimePicker1.Value.Date);
+            //dateTimePicker1.Value = new DateTime(2012, 05, 28);
         }
 
         public AddWindow(string Name, Film film)
@@ -28,6 +31,7 @@ namespace CPP.CS.CS408.FilmLib
             this.Text = Name;
             nameBox.Text = film.FilmName;
             ratingBox.Text = film.Rating.ToString();
+            commentsBox.Text = film.Comments;
         }
 
 
@@ -40,21 +44,32 @@ namespace CPP.CS.CS408.FilmLib
             film.FilmName = nameBox.Text;
             int rating;
             Int32.TryParse(ratingBox.Text, out rating);
-            if (rating > 10 || rating < 0)
-            {
-                MessageBox.Show("Enter a valid rating", "Invalid Rating");
-            }
             film.Rating = rating;
+            film.Comments = commentsBox.Text;
+            if (rating > Film.MAX_RATING || rating < Film.MIN_RATING)
+            {
+                errorProvider1.SetError(ratingBox, "Enter a number 0 - 10");
+            }
+            else
+            {
+                errorProvider1.Dispose();
+                addBtn.DialogResult = DialogResult.OK;
+            }
+            
         }
 
-        private void ratingBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void ratingBox_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.'))
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
             {
                 e.Handled = true;
+                errorProvider1.SetError(ratingBox, "Enter a number: 0 - 10");
+            }
+            else
+            {
+                errorProvider1.Dispose();
             }
         }
-
     }
 }
