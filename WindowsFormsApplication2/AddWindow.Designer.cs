@@ -39,6 +39,8 @@
             this.finishLbl = new System.Windows.Forms.Label();
             this.commentsLbl = new System.Windows.Forms.Label();
             this.commentsBox = new System.Windows.Forms.TextBox();
+            this.statusLbl = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,15 +93,15 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(101, 141);
+            this.dateTimePicker1.Location = new System.Drawing.Point(101, 195);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(139, 22);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // finishLbl
             // 
             this.finishLbl.AutoSize = true;
-            this.finishLbl.Location = new System.Drawing.Point(13, 145);
+            this.finishLbl.Location = new System.Drawing.Point(12, 195);
             this.finishLbl.Name = "finishLbl";
             this.finishLbl.Size = new System.Drawing.Size(79, 17);
             this.finishLbl.TabIndex = 6;
@@ -108,7 +110,7 @@
             // commentsLbl
             // 
             this.commentsLbl.AutoSize = true;
-            this.commentsLbl.Location = new System.Drawing.Point(16, 200);
+            this.commentsLbl.Location = new System.Drawing.Point(12, 250);
             this.commentsLbl.Name = "commentsLbl";
             this.commentsLbl.Size = new System.Drawing.Size(74, 17);
             this.commentsLbl.TabIndex = 7;
@@ -116,18 +118,41 @@
             // 
             // commentsBox
             // 
-            this.commentsBox.Location = new System.Drawing.Point(101, 194);
+            this.commentsBox.Location = new System.Drawing.Point(101, 250);
             this.commentsBox.Multiline = true;
             this.commentsBox.Name = "commentsBox";
             this.commentsBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.commentsBox.Size = new System.Drawing.Size(238, 64);
             this.commentsBox.TabIndex = 8;
             // 
+            // statusLbl
+            // 
+            this.statusLbl.AutoSize = true;
+            this.statusLbl.Location = new System.Drawing.Point(12, 135);
+            this.statusLbl.Name = "statusLbl";
+            this.statusLbl.Size = new System.Drawing.Size(48, 17);
+            this.statusLbl.TabIndex = 9;
+            this.statusLbl.Text = "Status";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Plan to Watch",
+            "Finished"});
+            this.comboBox1.Location = new System.Drawing.Point(101, 135);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(139, 24);
+            this.comboBox1.TabIndex = 10;
+            // 
             // AddWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 583);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.statusLbl);
             this.Controls.Add(this.commentsBox);
             this.Controls.Add(this.commentsLbl);
             this.Controls.Add(this.finishLbl);
@@ -159,5 +184,7 @@
         private System.Windows.Forms.Label finishLbl;
         private System.Windows.Forms.TextBox commentsBox;
         private System.Windows.Forms.Label commentsLbl;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label statusLbl;
     }
 }

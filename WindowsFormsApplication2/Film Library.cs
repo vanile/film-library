@@ -32,26 +32,47 @@ namespace CPP.CS.CS408.FilmLib
             dgvFilms.AutoSize = false;
             dgvFilms.DataSource = bs;
 
+            DataGridViewColumn col0 = new DataGridViewImageColumn();
+            col0.DataPropertyName = "Favorite Film";
+            col0.Name = "";
+            col0.Width = 20;
+            col0.ReadOnly = true;
+
             DataGridViewColumn col1 = new DataGridViewTextBoxColumn();
             col1.DataPropertyName = "FilmName";
             col1.Name = "Film Name";
             col1.Width = 125;
             col1.ReadOnly = true;
-            
-            dgvFilms.Columns.Add(col1);
 
             DataGridViewColumn col2 = new DataGridViewTextBoxColumn();
             col2.DataPropertyName = "Rating";
             col2.Name = "Rating/10";
             col2.Width = 65;
             col2.ReadOnly = true;
-            dgvFilms.Columns.Add(col2);
 
             DataGridViewColumn col3 = new DataGridViewTextBoxColumn();
             col3.DataPropertyName = "Comments";
             col3.Name = "Comments";
             col3.Width = 100;
             col3.ReadOnly = true;
+
+            DataGridViewColumn col4 = new DataGridViewTextBoxColumn();
+            col4.DataPropertyName = "DateWatched";
+            col4.Name = "Date Watched";
+            col4.Width = 70;
+            col4.ReadOnly = true;
+            
+            DataGridViewColumn col5 = new DataGridViewTextBoxColumn();
+            col5.DataPropertyName = "FilmStatus";
+            col5.Name = "Status";
+            col5.Width = 80;
+            col5.ReadOnly = true;
+
+            //dgvFilms.Columns.Add(col0);
+            dgvFilms.Columns.Add(col1);
+            dgvFilms.Columns.Add(col2);
+            dgvFilms.Columns.Add(col5);
+            dgvFilms.Columns.Add(col4);
             dgvFilms.Columns.Add(col3);
 
             this.Controls.Add(dgvFilms);
@@ -76,7 +97,20 @@ namespace CPP.CS.CS408.FilmLib
             {
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    int lol = bs.IndexOf(dog);
+                    bs[bs.IndexOf(dog)] = form.film;
+                }
+            }
+            save();
+        }
+
+        private void dgvFilms_DoubleClick(object sender, EventArgs e)
+        {
+            Film dog = (Film)dgvFilms.CurrentRow.DataBoundItem;
+
+            using (AddWindow form = new AddWindow("Edit Film", dog) { film = new Film() })
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
                     bs[bs.IndexOf(dog)] = form.film;
                 }
             }
@@ -187,7 +221,6 @@ namespace CPP.CS.CS408.FilmLib
         {
             SaveFileDialog saveDialog = new SaveFileDialog();
             saveDialog.Title = "Export to Text File";
-
             saveDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             saveDialog.FilterIndex = 2;
             saveDialog.RestoreDirectory = true;
@@ -207,18 +240,6 @@ namespace CPP.CS.CS408.FilmLib
                     s.Close();
                     sw.Close();
                 }
-            }
-        }
-
-        private void searchBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (comboBox1.SelectedIndex == 0)
-            {
-                searchByName();
-            }
-            else if (comboBox1.SelectedIndex == 1)
-            {
-                searchByRating();
             }
         }
 
@@ -272,7 +293,6 @@ namespace CPP.CS.CS408.FilmLib
         {
             Stream strm;
             OpenFileDialog openDialog = new OpenFileDialog();
-
             openDialog.Title = "Import XML File";
             openDialog.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
             openDialog.FilterIndex = 2;
@@ -306,6 +326,18 @@ namespace CPP.CS.CS408.FilmLib
                 newSearch += s + "+";
             }
             System.Diagnostics.Process.Start("https://www.google.com/search?as_q=" + newSearch);
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                searchByName();
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                searchByRating();
+            }
         }
     }
 }

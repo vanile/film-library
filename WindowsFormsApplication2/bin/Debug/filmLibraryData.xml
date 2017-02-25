@@ -1,18 +1,63 @@
 <?xml version="1.0"?>
 <ArrayOfFilm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Film>
-    <FilmName>poked</FilmName>
-    <Rating>8</Rating>
-    <Comments>loooldxfc</Comments>
+    <FilmName>poker dogs</FilmName>
+    <Rating>1</Rating>
+    <Comments>sdf</Comments>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <FavoriteFilm>false</FavoriteFilm>
   </Film>
   <Film>
     <FilmName>pokemon</FilmName>
     <Rating>5</Rating>
     <Comments>ha</Comments>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <FilmStatus>Finished</FilmStatus>
+    <FavoriteFilm>false</FavoriteFilm>
   </Film>
   <Film>
-    <FilmName>poker dogs</FilmName>
-    <Rating>1</Rating>
+    <FilmName>poked</FilmName>
+    <Rating>7</Rating>
+    <Comments>loooldxfc</Comments>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <FilmStatus>Plan to Watch</FilmStatus>
+    <FavoriteFilm>false</FavoriteFilm>
+  </Film>
+  <Film>
+    <FilmName>hahahahaha</FilmName>
+    <Rating>5</Rating>
+    <Comments>dsf</Comments>
+    <DateWatched>2017-02-15T00:00:00</DateWatched>
+    <FavoriteFilm>false</FavoriteFilm>
+  </Film>
+  <Film>
+    <FilmName>dog</FilmName>
+    <Rating>4</Rating>
+    <Comments>haha</Comments>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <FilmStatus>Finished</FilmStatus>
+    <FavoriteFilm>false</FavoriteFilm>
+  </Film>
+  <Film>
+    <FilmName>dd</FilmName>
+    <Rating>4</Rating>
     <Comments>sdf</Comments>
+    <DateWatched>2017-02-24T00:00:00</DateWatched>
+    <FavoriteFilm>false</FavoriteFilm>
+  </Film>
+  <Film>
+    <FilmName>cz</FilmName>
+    <Rating>4</Rating>
+    <Comments>ya</Comments>
+    <DateWatched>2017-02-24T00:00:00</DateWatched>
+    <FilmStatus>Finished</FilmStatus>
+    <FavoriteFilm>false</FavoriteFilm>
+  </Film>
+  <Film>
+    <FilmName>22</FilmName>
+    <Rating>4</Rating>
+    <Comments>s</Comments>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <FavoriteFilm>false</FavoriteFilm>
   </Film>
 </ArrayOfFilm>
