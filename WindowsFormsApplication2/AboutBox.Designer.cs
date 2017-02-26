@@ -111,7 +111,7 @@
             this.textBoxDescription.Size = new System.Drawing.Size(361, 155);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = "Film Library App CPP\r\n";
+            this.textBoxDescription.Text = "Film Library App CPP\r\n\r\n\r\n\r\nOfficial themoviedb.org API wrapper by nCubed";
             // 
             // okButton
             // 

@@ -45,7 +45,7 @@ namespace CPP.CS.CS408.FilmLib
             {
                 using (System.IO.StreamWriter write = new StreamWriter(fileName))
                 {
-                    write.WriteLine(film.FilmName);
+                    write.WriteLine(film.Name);
                     write.WriteLine("\t" + film.Rating);
                 }
             }

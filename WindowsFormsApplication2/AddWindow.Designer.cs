@@ -41,6 +41,9 @@
             this.commentsBox = new System.Windows.Forms.TextBox();
             this.statusLbl = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.descriptionBox = new System.Windows.Forms.TextBox();
+            this.descriptionLbl = new System.Windows.Forms.Label();
+            this.viewOBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,7 +113,7 @@
             // commentsLbl
             // 
             this.commentsLbl.AutoSize = true;
-            this.commentsLbl.Location = new System.Drawing.Point(12, 250);
+            this.commentsLbl.Location = new System.Drawing.Point(12, 376);
             this.commentsLbl.Name = "commentsLbl";
             this.commentsLbl.Size = new System.Drawing.Size(74, 17);
             this.commentsLbl.TabIndex = 7;
@@ -118,11 +121,11 @@
             // 
             // commentsBox
             // 
-            this.commentsBox.Location = new System.Drawing.Point(101, 250);
+            this.commentsBox.Location = new System.Drawing.Point(101, 376);
             this.commentsBox.Multiline = true;
             this.commentsBox.Name = "commentsBox";
             this.commentsBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentsBox.Size = new System.Drawing.Size(238, 64);
+            this.commentsBox.Size = new System.Drawing.Size(265, 64);
             this.commentsBox.TabIndex = 8;
             // 
             // statusLbl
@@ -139,18 +142,52 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Plan to Watch",
+            "In Queue",
             "Finished"});
             this.comboBox1.Location = new System.Drawing.Point(101, 135);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(139, 24);
             this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            // 
+            // descriptionBox
+            // 
+            this.descriptionBox.BackColor = System.Drawing.SystemColors.Window;
+            this.descriptionBox.Location = new System.Drawing.Point(101, 244);
+            this.descriptionBox.Multiline = true;
+            this.descriptionBox.Name = "descriptionBox";
+            this.descriptionBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.descriptionBox.Size = new System.Drawing.Size(265, 110);
+            this.descriptionBox.TabIndex = 11;
+            // 
+            // descriptionLbl
+            // 
+            this.descriptionLbl.AutoSize = true;
+            this.descriptionLbl.Location = new System.Drawing.Point(13, 244);
+            this.descriptionLbl.Name = "descriptionLbl";
+            this.descriptionLbl.Size = new System.Drawing.Size(79, 17);
+            this.descriptionLbl.TabIndex = 12;
+            this.descriptionLbl.Text = "Description";
+            // 
+            // viewOBtn
+            // 
+            this.viewOBtn.Location = new System.Drawing.Point(163, 529);
+            this.viewOBtn.Name = "viewOBtn";
+            this.viewOBtn.Size = new System.Drawing.Size(97, 33);
+            this.viewOBtn.TabIndex = 13;
+            this.viewOBtn.Text = "View Online";
+            this.viewOBtn.UseVisualStyleBackColor = true;
+            this.viewOBtn.Visible = false;
+            this.viewOBtn.Click += new System.EventHandler(this.viewOBtn_Click);
             // 
             // AddWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 583);
+            this.Controls.Add(this.viewOBtn);
+            this.Controls.Add(this.descriptionLbl);
+            this.Controls.Add(this.descriptionBox);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.statusLbl);
             this.Controls.Add(this.commentsBox);
@@ -186,5 +223,8 @@
         private System.Windows.Forms.Label commentsLbl;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label statusLbl;
+        private System.Windows.Forms.Label descriptionLbl;
+        private System.Windows.Forms.TextBox descriptionBox;
+        private System.Windows.Forms.Button viewOBtn;
     }
 }

@@ -47,8 +47,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DM.MovieApi, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TheMovieDbWrapper.0.8.1\lib\netstandard1.1\DM.MovieApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -79,7 +88,19 @@
       <DependentUpon>Film Library.cs</DependentUpon>
     </Compile>
     <Compile Include="Film.cs" />
-    <Compile Include="FilmDB.cs" />
+    <Compile Include="OMovieViewWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OMovieViewWindow.Designer.cs">
+      <DependentUpon>OMovieViewWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchOnlineWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchOnlineWindow.Designer.cs">
+      <DependentUpon>SearchOnlineWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieDbSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SortableBindingList.cs" />
@@ -92,6 +113,12 @@
     <EmbeddedResource Include="Film Library.resx">
       <DependentUpon>Film Library.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OMovieViewWindow.resx">
+      <DependentUpon>OMovieViewWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchOnlineWindow.resx">
+      <DependentUpon>SearchOnlineWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -102,6 +129,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\AboutBox.datasource" />
     <None Include="Properties\DataSources\AddWindow.datasource" />
     <None Include="Properties\DataSources\CPP.CS.CS408.FilmLib.Properties.Resources.datasource" />

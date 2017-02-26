@@ -51,6 +51,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchOMovieBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilms)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -252,11 +253,22 @@
             // 
             this.filmBindingSource.DataSource = typeof(CPP.CS.CS408.FilmLib.Film);
             // 
+            // searchOMovieBtn
+            // 
+            this.searchOMovieBtn.Location = new System.Drawing.Point(746, 105);
+            this.searchOMovieBtn.Name = "searchOMovieBtn";
+            this.searchOMovieBtn.Size = new System.Drawing.Size(205, 23);
+            this.searchOMovieBtn.TabIndex = 10;
+            this.searchOMovieBtn.Text = "Search Online";
+            this.searchOMovieBtn.UseVisualStyleBackColor = true;
+            this.searchOMovieBtn.Click += new System.EventHandler(this.searchOMovieBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 482);
+            this.Controls.Add(this.searchOMovieBtn);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.deleteBtn);
@@ -302,6 +314,7 @@
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchOnlineToolStripMenuItem;
+        private System.Windows.Forms.Button searchOMovieBtn;
     }
 }
 
