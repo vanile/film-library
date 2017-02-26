@@ -33,9 +33,6 @@ namespace CPP.CS.CS408.FilmLib
             comboBox1.SelectedIndex = 0;
 
             setColumns();
-            //MovieDbSettings mdb = new MovieDbSettings();
-            MovieDbFactory.RegisterSettings(MovieDbSettings.ApiKey , MovieDbSettings.ApiUrl);
-
             load();
             dgvFilms.AutoGenerateColumns = false;
             dgvFilms.AutoSize = false;
@@ -43,8 +40,9 @@ namespace CPP.CS.CS408.FilmLib
 
             this.Controls.Add(dgvFilms);
             this.AutoSize = true;
+
+            MovieDbFactory.RegisterSettings(MovieDbSettings.ApiKey, MovieDbSettings.ApiUrl);
             searchBox.GotFocus += searchBox_GotFocus;
-            //searchMovie();
         }
 
         public void addFilm(Film film)
@@ -99,25 +97,6 @@ namespace CPP.CS.CS408.FilmLib
             dgvFilms.Columns.Add(col3);
         }
 
-        private async void searchMovie()
-        {
-            var movieAPI = MovieDbFactory.Create<IApiMovieRequest>().Value;
-            int pageNumber = 1;
-            int totalPages;
-
-            ApiSearchResponse<MovieInfo> response = await movieAPI.SearchByTitleAsync("Star Wars", pageNumber);
-
-            // alternatively, just call response.ToString() which will provide the same paged information format as below:
-            Console.WriteLine("Page {0} of {1} ({2} total results)", response.PageNumber, response.TotalPages, response.TotalResults);
-
-            foreach (MovieInfo info in response.Results)
-            {
-                Console.WriteLine("{0} ({1}): {2}", info.Title, info.ReleaseDate, info.Overview);
-            }
-
-            totalPages = response.TotalPages;
-        }
-
         private void searchBox_GotFocus(object sender, EventArgs e)
         {
             if (searchCleared == false)
@@ -133,10 +112,7 @@ namespace CPP.CS.CS408.FilmLib
 
             using (AddWindow form = new AddWindow("Edit Film", dog) { film = dog })
             {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    bs[bs.IndexOf(dog)] = form.film;
-                }
+                if (form.ShowDialog() == DialogResult.OK) { bs[bs.IndexOf(dog)] = form.film; }
             }
             save();
         }
@@ -147,10 +123,7 @@ namespace CPP.CS.CS408.FilmLib
 
             using (AddWindow form = new AddWindow("Edit Film", dog) { film = dog })
             {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    bs[bs.IndexOf(dog)] = form.film;
-                }
+                if (form.ShowDialog() == DialogResult.OK) { bs[bs.IndexOf(dog)] = form.film; }
             }
             save();
         }
@@ -160,10 +133,7 @@ namespace CPP.CS.CS408.FilmLib
             SortableBindingList<Film> searchFilm = new SortableBindingList<Film>();
             foreach (Film sFilm in bs)
             {
-                if (sFilm.Name.Contains(searchBox.Text))
-                {
-                    searchFilm.Add(sFilm);
-                }
+                if (sFilm.Name.Contains(searchBox.Text)) { searchFilm.Add(sFilm); }
             }
             dgvFilms.DataSource = searchFilm;
         }
@@ -172,10 +142,7 @@ namespace CPP.CS.CS408.FilmLib
         {
             using(AddWindow form = new AddWindow() {film = new Film() })
             {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    bs.Add(form.film);
-                }
+                if (form.ShowDialog() == DialogResult.OK) { bs.Add(form.film); }
             }
             save();
         }
@@ -193,10 +160,7 @@ namespace CPP.CS.CS408.FilmLib
         {
             using (AddWindow form = new AddWindow() { film = new Film() })
             {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    bs.Add(form.film);
-                }
+                if (form.ShowDialog() == DialogResult.OK) { bs.Add(form.film); }
             }
             save();
         }
@@ -207,11 +171,7 @@ namespace CPP.CS.CS408.FilmLib
 
             using (AddWindow form = new AddWindow("Edit Film", dog) { film = new Film() })
             {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    int lol = bs.IndexOf(dog);
-                    bs[bs.IndexOf(dog)] = form.film;
-                }
+                if (form.ShowDialog() == DialogResult.OK) { bs[bs.IndexOf(dog)] = form.film; }
             }
             save();
         }
@@ -242,6 +202,7 @@ namespace CPP.CS.CS408.FilmLib
         {
             SortableBindingList<Film> loaded = new SortableBindingList<Film>();
             loaded = data.LoadFromFile("filmLibraryData.xml");
+
             if (loaded != null)
             {
                 bs = loaded;
@@ -305,10 +266,7 @@ namespace CPP.CS.CS408.FilmLib
             foreach (Film sFilm in bs)
             {
                 Int32.TryParse(searchBox.Text, out temp);
-                if (sFilm.Rating.Equals(temp))
-                {
-                    searchFilm.Add(sFilm);
-                }
+                if (sFilm.Rating.Equals(temp)) { searchFilm.Add(sFilm); }
             }
             dgvFilms.DataSource = searchFilm;
             checkSearchBoxEmpty();
@@ -378,9 +336,24 @@ namespace CPP.CS.CS408.FilmLib
             }
         }
 
+        /// <summary>
+        /// Does a Google web search of the film name
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void searchOMovieBtn_Click(object sender, EventArgs e)
         {
             new SearchOnlineWindow(this).Show();
+        }
+
+        private void dgvFilms_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Film dog = (Film)dgvFilms.CurrentRow.DataBoundItem;
+                dgvFilms.CurrentCell.ToolTipText = dog.Description;
+            }
+            catch (NullReferenceException) { }
         }
     }
 }

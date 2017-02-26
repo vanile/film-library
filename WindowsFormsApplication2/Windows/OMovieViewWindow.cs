@@ -16,16 +16,19 @@ namespace CPP.CS.CS408.FilmLib
         private Form1 form;
         public const string TmdbUrlMovieTitle = "https://www.themoviedb.org/movie/";
         public const string TmdbImgUrl = "https://image.tmdb.org/t/p/original";
-
+        
         public OMovieViewWindow(Film nFilm, Form1 nForm)
         {
             InitializeComponent();
             film = nFilm;
+            this.Text = film.Name + " (" + film.ReleaseDate.Year +")";
             form = nForm;
+
             overviewBox.Text = film.Description;
             titleBox.Text = film.Name;
-            //posterBox.Load(TmdbImgUrl + film.tmdbImgUrl);
-            posterBox.Load("https://image.tmdb.org/t/p/original/vyFj7ZFm5AWApNGowpUzoakMuyS.jpg");
+            releaseBox.Text = film.ReleaseDate.ToShortDateString();
+            posterBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            posterBox.Load(Film.TmdbImgUrl + film.tmdbImgUrl);
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
@@ -40,7 +43,8 @@ namespace CPP.CS.CS408.FilmLib
 
         private void viewOBtn_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(TmdbUrlMovieTitle + film.tmdbID);
+            System.Diagnostics.Process.Start(Film.TmdbUrlMovieTitle + film.tmdbID);
         }
+
     }
 }

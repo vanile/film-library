@@ -68,55 +68,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox.cs">
+    <Compile Include="Windows\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutBox.Designer.cs">
+    <Compile Include="Windows\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddWindow.cs">
+    <Compile Include="Windows\AddWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddWindow.Designer.cs">
+    <Compile Include="Windows\AddWindow.Designer.cs">
       <DependentUpon>AddWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataIO.cs" />
-    <Compile Include="Film Library.cs">
+    <Compile Include="Data\DataIO.cs" />
+    <Compile Include="Windows\Film Library.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Film Library.Designer.cs">
+    <Compile Include="Windows\Film Library.Designer.cs">
       <DependentUpon>Film Library.cs</DependentUpon>
     </Compile>
-    <Compile Include="Film.cs" />
-    <Compile Include="OMovieViewWindow.cs">
+    <Compile Include="Data\Film.cs" />
+    <Compile Include="Windows\OMovieViewWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OMovieViewWindow.Designer.cs">
+    <Compile Include="Windows\OMovieViewWindow.Designer.cs">
       <DependentUpon>OMovieViewWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchOnlineWindow.cs">
+    <Compile Include="Windows\SearchOnlineWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchOnlineWindow.Designer.cs">
+    <Compile Include="Windows\SearchOnlineWindow.Designer.cs">
       <DependentUpon>SearchOnlineWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="MovieDbSettings.cs" />
+    <Compile Include="Data\MovieDbSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SortableBindingList.cs" />
-    <EmbeddedResource Include="AboutBox.resx">
+    <Compile Include="Data\SortableBindingList.cs" />
+    <EmbeddedResource Include="Windows\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddWindow.resx">
+    <EmbeddedResource Include="Windows\AddWindow.resx">
       <DependentUpon>AddWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Film Library.resx">
+    <EmbeddedResource Include="Windows\Film Library.resx">
       <DependentUpon>Film Library.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OMovieViewWindow.resx">
+    <EmbeddedResource Include="Windows\OMovieViewWindow.resx">
       <DependentUpon>OMovieViewWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchOnlineWindow.resx">
+    <EmbeddedResource Include="Windows\SearchOnlineWindow.resx">
       <DependentUpon>SearchOnlineWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -129,7 +129,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
+    <None Include="Data\packages.config" />
     <None Include="Properties\DataSources\AboutBox.datasource" />
     <None Include="Properties\DataSources\AddWindow.datasource" />
     <None Include="Properties\DataSources\CPP.CS.CS408.FilmLib.Properties.Resources.datasource" />

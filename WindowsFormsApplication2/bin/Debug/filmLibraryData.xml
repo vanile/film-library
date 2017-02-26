@@ -2,150 +2,181 @@
 <ArrayOfFilm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Film>
     <Name>poker dogs</Name>
-    <Rating>1</Rating>
     <Comments>sdf</Comments>
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>1</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <FilmStatus>In Queue</FilmStatus>
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>pokemon</Name>
-    <Rating>5</Rating>
+    <Description />
     <Comments>ha</Comments>
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>5</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <FilmStatus>In Queue</FilmStatus>
-    <Description />
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>poked</Name>
-    <Rating>7</Rating>
+    <Description>ya</Description>
     <Comments>loooldxfc</Comments>
-    <DateWatched>2017-02-25T00:00:00</DateWatched>
-    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
     <FilmStatus>In Queue</FilmStatus>
-    <Description />
+    <Rating>7</Rating>
     <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
   </Film>
   <Film>
     <Name>hahahahaha</Name>
-    <Rating>5</Rating>
+    <Description />
     <Comments>dsf</Comments>
+    <Rating>5</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <Description />
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>dd</Name>
-    <Rating>4</Rating>
+    <Description />
     <Comments>sa</Comments>
+    <Rating>4</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <Description />
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>cz</Name>
-    <Rating>4</Rating>
+    <Description />
     <Comments>ya</Comments>
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>4</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <FilmStatus>Finished</FilmStatus>
-    <Description />
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>22</Name>
-    <Rating>4</Rating>
+    <Description>yas</Description>
     <Comments>s</Comments>
-    <DateWatched>2017-02-25T00:00:00</DateWatched>
-    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+    <Rating>4</Rating>
     <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
   </Film>
   <Film>
     <Name>Star Wars: The Force Awakens</Name>
-    <Rating>0</Rating>
+    <Description />
     <Comments />
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <Description />
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>Star Wars</Name>
-    <Rating>0</Rating>
+    <Description />
     <Comments />
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <Description />
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>yea</Name>
-    <Rating>4</Rating>
+    <Description>333</Description>
     <Comments>222</Comments>
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>4</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <FilmStatus>In Queue</FilmStatus>
-    <Description>333</Description>
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>Pokémon: The Movie 2000</Name>
-    <Rating>0</Rating>
+    <Description />
     <Comments />
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <Description />
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>Apple Stories</Name>
-    <Rating>0</Rating>
+    <Description>Documentary about the poor circumstances in the process of manufacturing iPhones - about mineworkers in Rwanda, illegal workers in Shenzhen, and repair-techs in Hamburg.</Description>
     <Comments />
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <Description>Documentary about the poor circumstances in the process of manufacturing iPhones - about mineworkers in Rwanda, illegal workers in Shenzhen, and repair-techs in Hamburg.</Description>
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>Pokémon: Spell of the Unown</Name>
-    <Rating>0</Rating>
+    <Description>When Molly Hale's sadness of her father's disappearance get to her, she unknowingly uses the Unown to create her own dream world along with Entei, who she believes to be her father. When Entei kidnaps Ash's mom, Ash along with Misty &amp;amp; Brock invade the mansion looking for his mom and trying to stop the mysteries of Molly's Dream World and Entei!</Description>
     <Comments />
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <Description>When Molly Hale's sadness of her father's disappearance get to her, she unknowingly uses the Unown to create her own dream world along with Entei, who she believes to be her father. When Entei kidnaps Ash's mom, Ash along with Misty &amp;amp; Brock invade the mansion looking for his mom and trying to stop the mysteries of Molly's Dream World and Entei!</Description>
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>Transformers: Age of Extinction</Name>
-    <Rating>0</Rating>
+    <Description>As humanity picks up the pieces, following the conclusion of "Transformers: Dark of the Moon," Autobots and Decepticons have all but vanished from the face of the planet. However, a group of powerful, ingenious businessman and scientists attempt to learn from past Transformer incursions and push the boundaries of technology beyond what they can control - all while an ancient, powerful Transformer menace sets Earth in his cross-hairs.</Description>
     <Comments />
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <Description>As humanity picks up the pieces, following the conclusion of "Transformers: Dark of the Moon," Autobots and Decepticons have all but vanished from the face of the planet. However, a group of powerful, ingenious businessman and scientists attempt to learn from past Transformer incursions and push the boundaries of technology beyond what they can control - all while an ancient, powerful Transformer menace sets Earth in his cross-hairs.</Description>
-    <tmdbID>0</tmdbID>
   </Film>
   <Film>
     <Name>Star Wars</Name>
-    <Rating>0</Rating>
-    <Comments />
-    <DateWatched>2017-02-25T00:00:00</DateWatched>
-    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
     <Description>Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.</Description>
+    <Comments />
+    <Rating>0</Rating>
     <tmdbID>11</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
   </Film>
   <Film>
     <Name>ya</Name>
-    <Rating>0</Rating>
+    <Description>pl</Description>
     <Comments>pl</Comments>
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
     <DateWatched>2017-02-25T00:00:00</DateWatched>
     <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
-    <FilmStatus>In Queue</FilmStatus>
-    <Description>pl</Description>
+  </Film>
+  <Film>
+    <Name>Urban Legends</Name>
+    <Description>Talk show host Rusty Defage introduces a series of short pieces that relate urban legends from around America in this anthology film.</Description>
+    <Comments />
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>0</Rating>
     <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>King Corn</Name>
+    <Description>King Corn is a fun and crusading journey into the digestive tract of our fast food nation where one ultra-industrial, pesticide-laden, heavily-subsidized commodity dominates the food pyramid from top to bottom – corn. Fueled by curiosity and a dash of naiveté, two college buddies return to their ancestral home of Greene, Iowa to figure out how a modest kernel conquered America. With the help of some real farmers, oodles of fertilizer and government aide, and some genetically modified seeds, the friends manage to grow one acre of corn. Along the way, they unlock the hilarious absurdities and scary but hidden truths about America’s modern food system in this engrossing and eye-opening documentary.</Description>
+    <tmdbImgUrl>/pvqjdmu5IdzUPQgqwylpPrUSKSd.jpg</tmdbImgUrl>
+    <Rating>0</Rating>
+    <tmdbID>15281</tmdbID>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <ReleaseDate>2007-10-12T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Dog Day Afternoon</Name>
+    <Description>A man robs a bank to pay for his lover's operation; it turns into a hostage situation and a media circus.</Description>
+    <tmdbImgUrl>/qgWuZ2yNJrclU8EldQG4rLhwMoy.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>968</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>1975-08-11T00:00:00</ReleaseDate>
   </Film>
 </ArrayOfFilm>

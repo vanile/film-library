@@ -11,11 +11,13 @@ namespace CPP.CS.CS408.FilmLib
 {
     class DataIO
     {
-        public DataIO()
-        {
-            
-        }
+        public DataIO() { }
 
+        /// <summary>
+        /// Serializes the list of Film into an XML file
+        /// </summary>
+        /// <param name="DBToStore"></param>
+        /// <param name="FileName"></param>
         public void SaveToFile(SortableBindingList<Film> DBToStore, string FileName)
         {
             XmlSerializer ser = new XmlSerializer(typeof(SortableBindingList<Film>));
@@ -24,6 +26,12 @@ namespace CPP.CS.CS408.FilmLib
                 ser.Serialize(str, DBToStore);
         }
 
+        /// <summary>
+        /// Desrealizes an XML file into a SortableBindingList<Film> object
+        /// to load into the Library
+        /// </summary>
+        /// <param name="FileName"></param>
+        /// <returns></returns>
         public SortableBindingList<Film> LoadFromFile(string FileName)
         {
             XmlSerializer ser = new XmlSerializer(typeof(SortableBindingList<Film>));
@@ -32,7 +40,7 @@ namespace CPP.CS.CS408.FilmLib
                 using (Stream str = File.Open(FileName, FileMode.Open))
                     return (SortableBindingList<Film>)ser.Deserialize(str);
             }
-            catch (FileNotFoundException e)
+            catch (FileNotFoundException)
             {
 
             }

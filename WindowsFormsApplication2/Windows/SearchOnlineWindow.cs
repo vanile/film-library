@@ -18,8 +18,13 @@ namespace CPP.CS.CS408.FilmLib
         private SortableBindingList<Film> bs = new SortableBindingList<Film>();
         private bool searchCleared;
         private Form1 form;
-        private const string tmdbUrlImage = "https://image.tmdb.org/t/p/original";
-
+        
+        /// <summary>
+        /// Constructor. nForm is the Film Library window. Necessary
+        /// to call a function to add a Film selected in this window
+        /// to the user's library.
+        /// </summary>
+        /// <param name="nForm"></param>
         public SearchOnlineWindow(Form1 nForm)
         {
             InitializeComponent();
@@ -37,6 +42,10 @@ namespace CPP.CS.CS408.FilmLib
             searchBox.GotFocus += searchBox_GotFocus;
         }
 
+        /// <summary>
+        /// Sets columns in the DataGridView with necessary names
+        /// and properties
+        /// </summary>
         public void setColumns()
         {
             DataGridViewColumn col0 = new DataGridViewTextBoxColumn();
@@ -63,6 +72,12 @@ namespace CPP.CS.CS408.FilmLib
             
         }
 
+        /// <summary>
+        /// When user first opens window, if user clicks on the search box,
+        /// search box will empty. Only one time.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void searchBox_GotFocus(object sender, EventArgs e)
         {
             if (searchCleared == false)
@@ -72,29 +87,38 @@ namespace CPP.CS.CS408.FilmLib
             }
         }
 
+        /// <summary>
+        /// Does an online search of film name entered into the Search Box
+        /// Fills the data grid view with all films in Film object format
+        /// </summary>
         private async void searchByName()
         {
             var movieAPI = MovieDbFactory.Create<IApiMovieRequest>().Value;
             int pageNumber = 1;
             int totalPages;
+            int numResults = 0;
 
             ApiSearchResponse<MovieInfo> response = await movieAPI.SearchByTitleAsync(searchBox.Text, pageNumber);
 
-            //Console.WriteLine("Page {0} of {1} ({2} total results)", response.PageNumber, response.TotalPages, response.TotalResults);
+            bs.Clear();
             foreach (MovieInfo info in response.Results)
             {
                 Film film = new Film();
+
                 film.Name = info.Title;
                 film.Description = info.Overview;
                 film.tmdbID = info.Id;
+                film.tmdbImgUrl = info.PosterPath;
                 film.ReleaseDate = new DateTime(info.ReleaseDate.Year, info.ReleaseDate.Month, info.ReleaseDate.Day);
-                Console.WriteLine(info.PosterPath);
+
                 bs.Add(film);
                 dgvOFilms.DataSource = bs;
-                //Console.WriteLine("{0} ({1}): {2}", info.Title, info.ReleaseDate, info.Id);
+                numResults++;
+                //numResultsLbl.Text = numResults.ToString();
             }
 
             totalPages = response.TotalPages;
+            if (numResults == 0) { MessageBox.Show("No results found"); }
         }
 
         private void checkSearchBoxEmpty()
@@ -105,24 +129,47 @@ namespace CPP.CS.CS408.FilmLib
             }
         }
 
+        /// <summary>
+        /// button1 = Search Button
+        /// Will procede to search online tmdb for user's input film name
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             searchByName();
         }
 
+        /// <summary>
+        /// When user double clicks on a row of Film, a OMovieViewWindow
+        /// will open with Film's information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvOFilms_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Film dog = (Film)dgvOFilms.CurrentRow.DataBoundItem;
-
             new OMovieViewWindow(dog, form).Show();
         }
 
+        /// <summary>
+        /// Right click -> View.
+        /// Opens a OMovieViewWindow with Film's information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void viewToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Film dog = (Film)dgvOFilms.CurrentRow.DataBoundItem;
             new OMovieViewWindow(dog, form).Show();
         }
 
+        /// <summary>
+        /// Right Click -> Add
+        /// Adds selected Film to the user's film library.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addToListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -134,6 +181,12 @@ namespace CPP.CS.CS408.FilmLib
     
         }
 
+        /// <summary>
+        /// Right click -> Open Page
+        /// Opens a TMDB webpage of the film selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Film dog = (Film)dgvOFilms.CurrentRow.DataBoundItem;

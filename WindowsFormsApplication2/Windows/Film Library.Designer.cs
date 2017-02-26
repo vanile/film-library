@@ -50,8 +50,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchOMovieBtn = new System.Windows.Forms.Button();
+            this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilms)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -97,6 +97,7 @@
             this.dgvFilms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFilms.Size = new System.Drawing.Size(690, 386);
             this.dgvFilms.TabIndex = 2;
+            this.dgvFilms.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFilms_CellMouseEnter);
             this.dgvFilms.DoubleClick += new System.EventHandler(this.dgvFilms_DoubleClick);
             // 
             // contextMenuStrip1
@@ -249,10 +250,6 @@
             this.comboBox1.Size = new System.Drawing.Size(100, 24);
             this.comboBox1.TabIndex = 8;
             // 
-            // filmBindingSource
-            // 
-            this.filmBindingSource.DataSource = typeof(CPP.CS.CS408.FilmLib.Film);
-            // 
             // searchOMovieBtn
             // 
             this.searchOMovieBtn.Location = new System.Drawing.Point(746, 105);
@@ -262,6 +259,10 @@
             this.searchOMovieBtn.Text = "Search Online";
             this.searchOMovieBtn.UseVisualStyleBackColor = true;
             this.searchOMovieBtn.Click += new System.EventHandler(this.searchOMovieBtn_Click);
+            // 
+            // filmBindingSource
+            // 
+            this.filmBindingSource.DataSource = typeof(CPP.CS.CS408.FilmLib.Film);
             // 
             // Form1
             // 

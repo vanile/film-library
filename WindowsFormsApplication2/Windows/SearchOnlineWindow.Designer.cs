@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.dgvOFilms = new System.Windows.Forms.DataGridView();
-            this.numResultsLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.numResultsLbl = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOFilms)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,37 @@
             this.dgvOFilms.TabIndex = 1;
             this.dgvOFilms.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOFilms_CellContentDoubleClick);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewToolStripMenuItem,
+            this.addToListToolStripMenuItem,
+            this.openPageToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(159, 82);
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
+            // 
+            // addToListToolStripMenuItem
+            // 
+            this.addToListToolStripMenuItem.Name = "addToListToolStripMenuItem";
+            this.addToListToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.addToListToolStripMenuItem.Text = "Add To List";
+            this.addToListToolStripMenuItem.Click += new System.EventHandler(this.addToListToolStripMenuItem_Click);
+            // 
+            // openPageToolStripMenuItem
+            // 
+            this.openPageToolStripMenuItem.Name = "openPageToolStripMenuItem";
+            this.openPageToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
+            this.openPageToolStripMenuItem.Text = "Open Page";
+            this.openPageToolStripMenuItem.Click += new System.EventHandler(this.openPageToolStripMenuItem_Click);
+            // 
             // numResultsLbl
             // 
             this.numResultsLbl.AutoSize = true;
@@ -79,37 +110,6 @@
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewToolStripMenuItem,
-            this.addToListToolStripMenuItem,
-            this.openPageToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(159, 82);
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.viewToolStripMenuItem.Text = "View";
-            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
-            // 
-            // addToListToolStripMenuItem
-            // 
-            this.addToListToolStripMenuItem.Name = "addToListToolStripMenuItem";
-            this.addToListToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.addToListToolStripMenuItem.Text = "Add To List";
-            this.addToListToolStripMenuItem.Click += new System.EventHandler(this.addToListToolStripMenuItem_Click);
-            // 
-            // openPageToolStripMenuItem
-            // 
-            this.openPageToolStripMenuItem.Name = "openPageToolStripMenuItem";
-            this.openPageToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.openPageToolStripMenuItem.Text = "Open Page";
-            this.openPageToolStripMenuItem.Click += new System.EventHandler(this.openPageToolStripMenuItem_Click);
             // 
             // SearchOnlineWindow
             // 
