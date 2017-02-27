@@ -197,7 +197,7 @@ namespace CPP.CS.CS408.FilmLib
         {
             Film dog = (Film)dgvFilms.CurrentRow.DataBoundItem;
 
-            using (AddWindow form = new AddWindow("Edit Film", dog) { film = new Film() })
+            using (AddWindow form = new AddWindow("Edit Film", dog) { film = dog})
             {
                 if (form.ShowDialog() == DialogResult.OK) { bs[bs.IndexOf(dog)] = form.film; }
             }

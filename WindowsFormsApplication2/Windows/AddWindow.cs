@@ -43,16 +43,17 @@ namespace CPP.CS.CS408.FilmLib
             ratingBox.Text = film.Rating.ToString();
             commentsBox.Text = film.Comments;
             descriptionBox.Text = film.Description;
+            comboBox1.SelectedIndex = 0;
+            try
+            {
+                dateTimePicker1.Value = film.DateWatched;
+            }
+            catch (ArgumentOutOfRangeException) { }
 
             int year = film.DateWatched.Year;
             int month = film.DateWatched.Month;
             int day = film.DateWatched.Day;
-            if (year == 1 && month == 1 && day == 1)
-            {
-                dateTimePicker1.Value = new DateTime(DateTime.Today.Year,
-                DateTime.Today.Month,
-                DateTime.Today.Day);
-            }
+
             try
             {
                 if (film.FilmStatus.Equals(Film.StatusFinished))
@@ -103,7 +104,12 @@ namespace CPP.CS.CS408.FilmLib
             film.Name = nameBox.Text;
             film.Rating = rating;
             film.Comments = commentsBox.Text;
-            film.DateWatched = new DateTime(dateTimePicker1.Value.Year, dateTimePicker1.Value.Month, dateTimePicker1.Value.Day);
+            if (comboBox1.SelectedIndex == 0) { }
+            else 
+            { 
+                film.DateWatched = new DateTime(dateTimePicker1.Value.Year, dateTimePicker1.Value.Month, dateTimePicker1.Value.Day);
+            }
+            
             film.Description = descriptionBox.Text;
 
             try
