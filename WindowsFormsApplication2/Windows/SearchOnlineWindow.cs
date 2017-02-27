@@ -17,7 +17,7 @@ namespace CPP.CS.CS408.FilmLib
     {
         private SortableBindingList<Film> bs = new SortableBindingList<Film>();
         private bool searchCleared;
-        private Form1 form;
+        private FilmLibraryWindow form;
         
         /// <summary>
         /// Constructor. nForm is the Film Library window. Necessary
@@ -25,7 +25,7 @@ namespace CPP.CS.CS408.FilmLib
         /// to the user's library.
         /// </summary>
         /// <param name="nForm"></param>
-        public SearchOnlineWindow(Form1 nForm)
+        public SearchOnlineWindow(FilmLibraryWindow nForm)
         {
             InitializeComponent();
             searchCleared = false;

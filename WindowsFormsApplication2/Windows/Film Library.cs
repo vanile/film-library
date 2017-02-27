@@ -16,7 +16,7 @@ using DM.MovieApi.ApiResponse;
 
 namespace CPP.CS.CS408.FilmLib
 {
-    public partial class Form1 : Form
+    public partial class FilmLibraryWindow : Form
     {
         private SortableBindingList<Film> bs = new SortableBindingList<Film>();
         
@@ -24,7 +24,7 @@ namespace CPP.CS.CS408.FilmLib
         private DataIO data;
         private string currentFile;
 
-        public Form1()
+        public FilmLibraryWindow()
         {
             InitializeComponent();
             this.CenterToScreen();
@@ -45,12 +45,22 @@ namespace CPP.CS.CS408.FilmLib
             searchBox.GotFocus += searchBox_GotFocus;
         }
 
+        /// <summary>
+        /// Used by other classes to add a Film
+        /// to the list.
+        /// </summary>
+        /// <param name="film"></param>
         public void addFilm(Film film)
         {
             bs.Add(film);
             dgvFilms.DataSource = bs;
             save();
         }
+
+        /// <summary>
+        /// Sets necessary columns in DataGridView with needed
+        /// properties
+        /// </summary>
         private void setColumns()
         {
             DataGridViewColumn col0 = new DataGridViewImageColumn();
@@ -97,6 +107,12 @@ namespace CPP.CS.CS408.FilmLib
             dgvFilms.Columns.Add(col3);
         }
 
+        /// <summary>
+        /// When user clicks on search box, default "Search" text
+        /// will be removed only the first time user does this action.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void searchBox_GotFocus(object sender, EventArgs e)
         {
             if (searchCleared == false)
@@ -117,6 +133,12 @@ namespace CPP.CS.CS408.FilmLib
             save();
         }
 
+        /// <summary>
+        /// When user double click's on a row, open an AddWindow 
+        /// for editing purposes.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvFilms_DoubleClick(object sender, EventArgs e)
         {
             Film dog = (Film)dgvFilms.CurrentRow.DataBoundItem;
@@ -165,6 +187,12 @@ namespace CPP.CS.CS408.FilmLib
             save();
         }
 
+        /// <summary>
+        /// Right click -> Edit
+        /// Opens AddWindow for editing selected film's information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void editToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
             Film dog = (Film)dgvFilms.CurrentRow.DataBoundItem;
@@ -176,6 +204,12 @@ namespace CPP.CS.CS408.FilmLib
             save();
         }
 
+        /// <summary>
+        /// Right click -> Delete
+        /// Deletes Film row and object
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void deleteToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dgvFilms.SelectedRows)
@@ -185,6 +219,10 @@ namespace CPP.CS.CS408.FilmLib
             save();
         }
 
+        /// <summary>
+        /// Saves state of SortableBindingList<Film> into default
+        /// XML file.
+        /// </summary>
         private void save()
         {
             if (currentFile != null)
@@ -198,6 +236,9 @@ namespace CPP.CS.CS408.FilmLib
             
         }
 
+        /// <summary>
+        /// Load from default file.
+        /// </summary>
         private void load()
         {
             SortableBindingList<Film> loaded = new SortableBindingList<Film>();
@@ -216,6 +257,12 @@ namespace CPP.CS.CS408.FilmLib
             data.SaveToText(bs, fileName);
         }
 
+        /// <summary>
+        /// Export list into a more readable .txt file. 
+        /// Location is selected by user with a Dialog.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveDialog = new SaveFileDialog();
@@ -242,6 +289,10 @@ namespace CPP.CS.CS408.FilmLib
             }
         }
 
+        /// <summary>
+        /// Searches through user's library for films with film names
+        /// that contain the strings entered into search box
+        /// </summary>
         private void searchByName()
         {
             SortableBindingList<Film> searchFilm = new SortableBindingList<Film>();
@@ -258,6 +309,10 @@ namespace CPP.CS.CS408.FilmLib
             checkSearchBoxEmpty();
         }
 
+        /// <summary>
+        /// Searches through the user's library for films with the same
+        /// rating as entered by user.
+        /// </summary>
         private void searchByRating()
         {
             SortableBindingList<Film> searchFilm = new SortableBindingList<Film>();
@@ -285,6 +340,12 @@ namespace CPP.CS.CS408.FilmLib
             new AboutBox().Show();
         }
 
+        /// <summary>
+        /// A Dialog will open up to search/browse through the user's
+        /// file system to open an XML file to import.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void importToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Stream strm;
@@ -312,6 +373,12 @@ namespace CPP.CS.CS408.FilmLib
             dgvFilms.DataSource = bs;
         }
 
+        /// <summary>
+        /// Right click -> Search Online
+        /// Google searches the selected film's name
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void searchOnlineToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Film dog = (Film)dgvFilms.CurrentRow.DataBoundItem;
@@ -324,6 +391,13 @@ namespace CPP.CS.CS408.FilmLib
             System.Diagnostics.Process.Start("https://www.google.com/search?as_q=" + newSearch);
         }
 
+        /// <summary>
+        /// Real time search through user's library as the user types.
+        /// Searches by Name if drop down is set to "by Name" and rating
+        /// if "by Rating".
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)
@@ -354,6 +428,17 @@ namespace CPP.CS.CS408.FilmLib
                 dgvFilms.CurrentCell.ToolTipText = dog.Description;
             }
             catch (NullReferenceException) { }
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to clear your library?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                bs.Clear();
+                dgvFilms.DataSource = bs;
+                save();
+            }
+            else { }
         }
     }
 }

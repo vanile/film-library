@@ -13,11 +13,11 @@ namespace CPP.CS.CS408.FilmLib
     public partial class OMovieViewWindow : Form
     {
         private Film film;
-        private Form1 form;
+        private FilmLibraryWindow form;
         public const string TmdbUrlMovieTitle = "https://www.themoviedb.org/movie/";
         public const string TmdbImgUrl = "https://image.tmdb.org/t/p/original";
         
-        public OMovieViewWindow(Film nFilm, Form1 nForm)
+        public OMovieViewWindow(Film nFilm, FilmLibraryWindow nForm)
         {
             InitializeComponent();
             film = nFilm;

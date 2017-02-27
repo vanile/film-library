@@ -16,7 +16,7 @@ namespace CPP.CS.CS408.FilmLib
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FilmLibraryWindow());
         }
     }
 }

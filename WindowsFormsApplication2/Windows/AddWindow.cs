@@ -32,10 +32,11 @@ namespace CPP.CS.CS408.FilmLib
         public AddWindow(string Name, Film nfilm)
         {
             InitializeComponent();
-            filmHasTmdbId();
+            
             this.CenterToScreen();
             this.Text = Name;
             film = nfilm;
+            filmHasTmdbId();
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
 
             nameBox.Text = film.Name;
