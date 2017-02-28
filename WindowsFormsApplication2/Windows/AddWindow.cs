@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace CPP.CS.CS408.FilmLib
 {
+    /// <summary>
+    /// This window pops up when a user manually edits or adds
+    /// a film to their library.
+    /// </summary>
     public partial class AddWindow : Form
     {
         public Film film { get; set; }
         private const string TmdbUrlMovieTitle = "https://www.themoviedb.org/movie/";
 
+        /// <summary>
+        /// This constructor is called if the user is adding
+        /// a new film to their library.
+        /// </summary>
         public AddWindow()
         {
             InitializeComponent();
@@ -32,9 +40,8 @@ namespace CPP.CS.CS408.FilmLib
         public AddWindow(string Name, Film nfilm)
         {
             InitializeComponent();
-            
             this.CenterToScreen();
-            this.Text = Name;
+            this.Text = "Edit: " + nfilm.Name;
             film = nfilm;
             filmHasTmdbId();
             dateTimePicker1.Format = DateTimePickerFormat.Custom;

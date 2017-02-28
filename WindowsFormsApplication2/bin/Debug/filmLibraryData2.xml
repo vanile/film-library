@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<ArrayOfFilm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Film>
+    <Name>poker dogs</Name>
+    <Comments>sdf</Comments>
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>1</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-25T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>pokemon</Name>
+    <Description />
+    <Comments>ha</Comments>
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>5</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-25T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Star Wars: The Force Awakens</Name>
+    <Description />
+    <Comments />
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-25T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Transformers: Age of Extinction</Name>
+    <Description>As humanity picks up the pieces, following the conclusion of "Transformers: Dark of the Moon," Autobots and Decepticons have all but vanished from the face of the planet. However, a group of powerful, ingenious businessman and scientists attempt to learn from past Transformer incursions and push the boundaries of technology beyond what they can control - all while an ancient, powerful Transformer menace sets Earth in his cross-hairs.</Description>
+    <Comments />
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Star Wars</Name>
+    <Description>Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.</Description>
+    <Comments />
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-07T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>ya</Name>
+    <Description>pl</Description>
+    <Comments>pl</Comments>
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-25T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Urban Legends</Name>
+    <Description>Talk show host Rusty Defage introduces a series of short pieces that relate urban legends from around America in this anthology film.</Description>
+    <Comments />
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-08T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>King Corn</Name>
+    <Description>King Corn is a fun and crusading journey into the digestive tract of our fast food nation where one ultra-industrial, pesticide-laden, heavily-subsidized commodity dominates the food pyramid from top to bottom – corn. Fueled by curiosity and a dash of naiveté, two college buddies return to their ancestral home of Greene, Iowa to figure out how a modest kernel conquered America. With the help of some real farmers, oodles of fertilizer and government aide, and some genetically modified seeds, the friends manage to grow one acre of corn. Along the way, they unlock the hilarious absurdities and scary but hidden truths about America’s modern food system in this engrossing and eye-opening documentary.</Description>
+    <tmdbImgUrl>/pvqjdmu5IdzUPQgqwylpPrUSKSd.jpg</tmdbImgUrl>
+    <Comments />
+    <Rating>0</Rating>
+    <tmdbID>15281</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>2007-10-12T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Dog Day Afternoon</Name>
+    <Description>A man robs a bank to pay for his lover's operation; it turns into a hostage situation and a media circus.</Description>
+    <Comments />
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Star Trek</Name>
+    <Description>The fate of the galaxy rests in the hands of bitter rivals. One, James Kirk, is a delinquent, thrill-seeking Iowa farm boy. The other, Spock, a Vulcan, was raised in a logic-based society that rejects all emotion. As fiery instinct clashes with calm reason, their unlikely but powerful partnership is the only thing capable of leading their crew through unimaginable danger, boldly going where no one has gone before. The human adventure has begun again.</Description>
+    <tmdbImgUrl>/xPihqTMhCh6b8DHYzE61jrIiNMS.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>13475</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>2009-05-06T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Star</Name>
+    <Description>Three different persons, three different lives are connected in a mysterious way. 15 year old teenager suffering of misunderstanding, his glamorous and arrogant stepmother and the young untalented but full of optimism actress. Their destinies aren’t predetermined and their lives are very fragile.</Description>
+    <tmdbImgUrl>/hOsvkCePPJ9Fa673zov7sLXH0MI.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>278718</tmdbID>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <ReleaseDate>2014-06-18T00:00:00</ReleaseDate>
+  </Film>
+</ArrayOfFilm>

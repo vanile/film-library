@@ -9,6 +9,10 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace CPP.CS.CS408.FilmLib
 {
+    /// <summary>
+    /// Manages importing/exporting/saving/loading actions
+    /// needed by the application.
+    /// </summary>
     class DataIO
     {
         public DataIO() { }

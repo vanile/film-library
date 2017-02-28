@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<ArrayOfFilm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Film>
+    <Name>10 Cloverfield Lane</Name>
+    <Description>Waking up from a car accident, a young woman finds herself in the basement of a man who says he's saved her life from a chemical attack that has left the outside uninhabitable.</Description>
+    <Comments>The last scene was pretty cool</Comments>
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>10</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>13th</Name>
+    <Description>An in-depth look at the prison system in the United States and how it reveals the nation's history of racial inequality.</Description>
+    <tmdbImgUrl>/zyv3omPVI9u5Kmem7l1xycnLCYP.jpg</tmdbImgUrl>
+    <Comments>I liked that one part</Comments>
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>9</Rating>
+    <tmdbID>407806</tmdbID>
+    <DateWatched>2016-10-13T00:00:00</DateWatched>
+    <ReleaseDate>2016-10-07T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Aquarius</Name>
+    <Description>Clara, a 65 year old widow and retired music critic, was born into a wealthy and traditional family in Recife, Brazil. She is the last resident of the Aquarius, an original two-story building, built in the 1940s, in the upper-class, seaside Boa Viagem Avenue. All the neighboring apartments have already been acquired by a company which has other plans for that plot.</Description>
+    <tmdbImgUrl>/gxuT8EbgXsHq02LLDYuXdTD963V.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>377273</tmdbID>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <ReleaseDate>2016-09-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Bad Cat</Name>
+    <Description>Produced by Turkey's biggest animation studio, Anima Istanbul, The Bad Cat is an animated epic for young adults featuring the unforgettably bad cat, Shero and his foul mouthed gang in action. As animals inhabiting streets Shero and his friends are after what anyone else in their notoriously sleazy Istanbul neighborhood wants: debauchery with girls, food and the occasional drinking binge. This ordinary looking day will prove otherwise as their paths cross with humans, things get a little out of hand in hilarious, harsh and unexpected ways.  The Bad Cat is an animated 3D feature film that strikes into our heads the epitome of what a bad cat who's deprived of love and barbeque is capable of. The story involves a sleazy, sexed up cat Shero, discovers he is the father of a bastard son.</Description>
+    <tmdbImgUrl>/mdnSGvu7IWfDye27a19U6xqKQgO.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>5</Rating>
+    <tmdbID>355066</tmdbID>
+    <DateWatched>2016-12-21T00:00:00</DateWatched>
+    <ReleaseDate>2016-02-05T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Doctor Strange</Name>
+    <Description>After his career is destroyed, a brilliant but arrogant surgeon gets a new lease on life when a sorcerer takes him under his wing and trains him to defend the world against evil.</Description>
+    <Comments>Great</Comments>
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>10</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Finding Dory</Name>
+    <Description>Dory is reunited with her friends Nemo and Marlin in the search for answers about her past. What can she remember? Who are her parents? And where did she learn to speak Whale?</Description>
+    <Comments>Found dory</Comments>
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>8</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2016-12-14T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Green Room</Name>
+    <Description>A young punk rock band find themselves trapped in a secluded venue after stumbling upon a horrific act of violence.</Description>
+    <Comments>Meh</Comments>
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>5</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Iron Man</Name>
+    <Description>After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.</Description>
+    <tmdbImgUrl>/s2IG9qXfhJYxIttKyroYFBsHwzQ.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>8</Rating>
+    <tmdbID>1726</tmdbID>
+    <DateWatched>2010-06-30T00:00:00</DateWatched>
+    <ReleaseDate>2008-04-30T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Little Men</Name>
+    <Description>Jake is a quiet, sensitive middle schooler with dreams of being an artist. He meets the affably brash Tony at his grandfather's funeral, and the unlikely pair soon hit it off. The budding friendship is put at risk, however, when a rent dispute between Jake's father, Brian, and Tony's mother, Leonor, threatens to become contentious.</Description>
+    <tmdbImgUrl>/vOInh2NRemhAo5mSZLDRil4o1Zp.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>373473</tmdbID>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <ReleaseDate>2016-08-05T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Moonlight</Name>
+    <Description>The tender, heartbreaking story of a young man’s struggle to find himself, told across three defining chapters in his life as he experiences the ecstasy, pain, and beauty of falling in love, while grappling with his own sexuality.</Description>
+    <Comments />
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>7</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2017-02-26T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Pokémon: The First Movie: Mewtwo Strikes Back</Name>
+    <Description>The adventure explodes into action with the debut of Mewtwo, a bio-engineered Pokemon created from the DNA of Mew, the rarest of all Pokemon. Determined to prove its superiority, Mewtwo lures Ash, Pikachu and others into a Pokemon match like none before. Mewtwo vs. Mew. Super-clones vs. Pokemon. It's the ultimate showdown ... with the very future of the world at stake!</Description>
+    <Comments />
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Rogue One: A Star Wars Story</Name>
+    <Description>A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.</Description>
+    <tmdbImgUrl>/qjiskwlV1qQzRCjpV0cL9pEMF9a.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>330459</tmdbID>
+    <DateWatched>2016-12-28T00:00:00</DateWatched>
+    <ReleaseDate>2016-12-14T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Simon's Cat</Name>
+    <Description>Simon's cat follows the silent-movie-like adventures of a cat and his owner and lots of others.</Description>
+    <tmdbImgUrl>/XaJP3vZtrLlMpV6MgZLKkUmJRP.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>264356</tmdbID>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <ReleaseDate>2012-10-19T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Star Wars: The Force Awakens</Name>
+    <Description>Thirty years after defeating the Galactic Empire, Han Solo and his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.</Description>
+    <tmdbImgUrl>/weUSwMdQIa3NaXVzwUoIIcAi85d.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>7</Rating>
+    <tmdbID>140607</tmdbID>
+    <DateWatched>2016-12-29T00:00:00</DateWatched>
+    <ReleaseDate>2015-12-15T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>The Lobster</Name>
+    <Description>In a dystopian near future, single people, according to the laws of The City, are taken to The Hotel, where they are obliged to find a romantic partner in forty-five days or are transformed into beasts and sent off into The Woods.</Description>
+    <tmdbImgUrl>/yR60EqMGS9hHq9I5Pkq2hG984TP.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>254320</tmdbID>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <ReleaseDate>2015-10-08T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>The Nice Guys</Name>
+    <Description>A private eye investigates the apparent suicide of a fading porn star in 1970s Los Angeles and uncovers a conspiracy.</Description>
+    <tmdbImgUrl>/pbJ1vNwK9X6ZQm2vxarxcLJ0aGn.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>290250</tmdbID>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <ReleaseDate>2016-05-15T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Transformers</Name>
+    <Description>Young teenager, Sam Witwicky becomes involved in the ancient struggle between two extraterrestrial factions of transforming robots – the heroic Autobots and the evil Decepticons. Sam holds the clue to unimaginable power and the Decepticons will stop at nothing to retrieve it.</Description>
+    <tmdbImgUrl>/bgSHbGEA1OM6qDs3Qba4VlSZsNG.jpg</tmdbImgUrl>
+    <Comments />
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>1858</tmdbID>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <ReleaseDate>2007-06-27T00:00:00</ReleaseDate>
+  </Film>
+  <Film>
+    <Name>Zootopia</Name>
+    <Description>Determined to prove herself, Officer Judy Hopps, the first bunny on Zootopia's police force, jumps at the chance to crack her first case - even if it means partnering with scam-artist fox Nick Wilde to solve the mystery.</Description>
+    <Comments>Pretty cool and nice animations </Comments>
+    <FilmStatus>Finished</FilmStatus>
+    <Rating>8</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>2016-06-16T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
+</ArrayOfFilm>

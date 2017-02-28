@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 
 namespace CPP.CS.CS408.FilmLib
 {
+    /// <summary>
+    /// Binding List structure to be used as the Data Source
+    /// of the Film Library's Data Grid View. This allows
+    /// user to sort through each category by clicking on the
+    /// row header.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class SortableBindingList<T> : BindingList<T>
     {
         private bool isSortedValue;

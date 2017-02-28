@@ -19,11 +19,13 @@ namespace CPP.CS.CS408.FilmLib
     public partial class FilmLibraryWindow : Form
     {
         private SortableBindingList<Film> bs = new SortableBindingList<Film>();
-        
-        private bool searchCleared;
-        private DataIO data;
+
         private string currentFile;
 
+        private bool searchCleared;
+
+        private DataIO data;
+        
         public FilmLibraryWindow()
         {
             InitializeComponent();
@@ -266,26 +268,14 @@ namespace CPP.CS.CS408.FilmLib
         private void exportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveDialog = new SaveFileDialog();
-            saveDialog.Title = "Export to Text File";
-            saveDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-            saveDialog.FilterIndex = 2;
+            saveDialog.Title = "Export XML File";
+            saveDialog.Filter = "XML file (*.xml)|*.xml|All files (*.*)|*.*";
+            saveDialog.FilterIndex = 1;
             saveDialog.RestoreDirectory = true;
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
-                string tab = "\t";
-                string rating = "Rating: ";
-                using (Stream s = File.Open(saveDialog.FileName, FileMode.OpenOrCreate))
-                using (StreamWriter sw = new StreamWriter(s))
-                {
-                    foreach (Film film in bs)
-                    {
-                        sw.WriteLine("[" + film.Name + "]");
-                        sw.WriteLine(tab + rating + film.Rating);
-                    }
-                    s.Close();
-                    sw.Close();
-                }
+                data.SaveToFile(bs, saveDialog.FileName);
             }
         }
 
@@ -311,22 +301,50 @@ namespace CPP.CS.CS408.FilmLib
 
         /// <summary>
         /// Searches through the user's library for films with the same
-        /// rating as entered by user.
+        /// rating as entered by user. Range enabled. Use >7 <7 for example
         /// </summary>
         private void searchByRating()
         {
             SortableBindingList<Film> searchFilm = new SortableBindingList<Film>();
+            char[] searchText = searchBox.Text.ToCharArray();
             int temp;
-
-            foreach (Film sFilm in bs)
+            try
             {
-                Int32.TryParse(searchBox.Text, out temp);
-                if (sFilm.Rating.Equals(temp)) { searchFilm.Add(sFilm); }
+                if (searchText[0] == '>')
+                {
+                    foreach (Film sFilm in bs)
+                    {
+                        Int32.TryParse(searchText[1].ToString(), out temp);
+                        if (sFilm.Rating > temp) { searchFilm.Add(sFilm); }
+                    }
+                }
+                else if (searchText[0] == '<')
+                {
+                    foreach (Film sFilm in bs)
+                    {
+                        Int32.TryParse(searchText[1].ToString(), out temp);
+                        if (sFilm.Rating < temp) { searchFilm.Add(sFilm); }
+                    }
+                }
+                else
+                {
+                    foreach (Film sFilm in bs)
+                    {
+                        Int32.TryParse(searchBox.Text, out temp);
+                        if (sFilm.Rating.Equals(temp)) { searchFilm.Add(sFilm); }
+                    }
+                }
             }
+            catch (Exception) { }
+            
             dgvFilms.DataSource = searchFilm;
             checkSearchBoxEmpty();
         }
 
+        /// <summary>
+        /// Checks if the search box is empty.
+        /// empty meaning not characters entered
+        /// </summary>
         private void checkSearchBoxEmpty()
         {
             if (string.IsNullOrWhiteSpace(searchBox.Text))
@@ -352,7 +370,7 @@ namespace CPP.CS.CS408.FilmLib
             OpenFileDialog openDialog = new OpenFileDialog();
             openDialog.Title = "Import XML File";
             openDialog.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
-            openDialog.FilterIndex = 2;
+            openDialog.FilterIndex = 1;
             openDialog.RestoreDirectory = true;
 
             if (openDialog.ShowDialog() == DialogResult.OK)
@@ -420,6 +438,12 @@ namespace CPP.CS.CS408.FilmLib
             new SearchOnlineWindow(this).Show();
         }
 
+        /// <summary>
+        /// Tooltip text pops up when the user hovers mouse over
+        /// a row. Information is the film's description if available.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvFilms_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -430,6 +454,12 @@ namespace CPP.CS.CS408.FilmLib
             catch (NullReferenceException) { }
         }
 
+        /// <summary>
+        /// Options -> Clear.
+        /// Allows user to clear his entire saved library.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to clear your library?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

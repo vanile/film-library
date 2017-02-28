@@ -10,10 +10,18 @@ using System.Windows.Forms;
 
 namespace CPP.CS.CS408.FilmLib
 {
+    /// <summary>
+    /// This window is opened when a user right clicks -> View
+    /// on a searched film through Search Online Window.
+    /// Displays information such as movie's picture, title,
+    /// release date, and description.
+    /// </summary>
     public partial class OMovieViewWindow : Form
     {
         private Film film;
+
         private FilmLibraryWindow form;
+
         public const string TmdbUrlMovieTitle = "https://www.themoviedb.org/movie/";
         public const string TmdbImgUrl = "https://image.tmdb.org/t/p/original";
         
@@ -28,7 +36,12 @@ namespace CPP.CS.CS408.FilmLib
             titleBox.Text = film.Name;
             releaseBox.Text = film.ReleaseDate.ToShortDateString();
             posterBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            posterBox.Load(Film.TmdbImgUrl + film.tmdbImgUrl);
+            try
+            {
+                posterBox.Load(Film.TmdbImgUrl + film.tmdbImgUrl);
+            }
+            catch (System.Net.WebException) { }
+            
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
@@ -39,11 +52,13 @@ namespace CPP.CS.CS408.FilmLib
         private void addBtn_Click(object sender, EventArgs e)
         {
             form.addFilm(film);
+            this.Close();
         }
 
         private void viewOBtn_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(Film.TmdbUrlMovieTitle + film.tmdbID);
+            this.Close();
         }
 
     }

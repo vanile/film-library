@@ -16,8 +16,10 @@ namespace CPP.CS.CS408.FilmLib
     public partial class SearchOnlineWindow : Form
     {
         private SortableBindingList<Film> bs = new SortableBindingList<Film>();
-        private bool searchCleared;
+
         private FilmLibraryWindow form;
+
+        private bool searchCleared;
         
         /// <summary>
         /// Constructor. nForm is the Film Library window. Necessary
@@ -114,7 +116,7 @@ namespace CPP.CS.CS408.FilmLib
                 bs.Add(film);
                 dgvOFilms.DataSource = bs;
                 numResults++;
-                //numResultsLbl.Text = numResults.ToString();
+                numResultsLbl.Text = "Page: " + pageNumber.ToString();
             }
 
             totalPages = response.TotalPages;

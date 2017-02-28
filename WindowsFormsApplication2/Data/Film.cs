@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace CPP.CS.CS408.FilmLib
 {
+    /// <summary>
+    /// Film object class. The unit of this program.
+    /// Holds a film's information.
+    /// </summary>
     public class Film
     {   
         public string Name { get; set; }

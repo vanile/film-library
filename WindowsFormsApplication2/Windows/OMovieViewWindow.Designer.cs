@@ -52,7 +52,7 @@
             // 
             this.overviewBox.BackColor = System.Drawing.SystemColors.Menu;
             this.overviewBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.overviewBox.Location = new System.Drawing.Point(44, 186);
+            this.overviewBox.Location = new System.Drawing.Point(44, 181);
             this.overviewBox.Multiline = true;
             this.overviewBox.Name = "overviewBox";
             this.overviewBox.ReadOnly = true;
@@ -84,7 +84,7 @@
             this.titleBox.BackColor = System.Drawing.SystemColors.Menu;
             this.titleBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.titleBox.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleBox.Location = new System.Drawing.Point(44, 30);
+            this.titleBox.Location = new System.Drawing.Point(39, 30);
             this.titleBox.Multiline = true;
             this.titleBox.Name = "titleBox";
             this.titleBox.ReadOnly = true;
@@ -93,6 +93,7 @@
             // 
             // posterBox
             // 
+            this.posterBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.posterBox.Location = new System.Drawing.Point(341, 30);
             this.posterBox.Name = "posterBox";
             this.posterBox.Size = new System.Drawing.Size(187, 228);

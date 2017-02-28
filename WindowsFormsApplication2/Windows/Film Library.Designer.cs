@@ -62,7 +62,7 @@
             // searchBox
             // 
             this.searchBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.searchBox.Location = new System.Drawing.Point(724, 31);
+            this.searchBox.Location = new System.Drawing.Point(613, 31);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(205, 22);
             this.searchBox.TabIndex = 0;
@@ -72,7 +72,7 @@
             // 
             // searchBtn
             // 
-            this.searchBtn.Location = new System.Drawing.Point(724, 58);
+            this.searchBtn.Location = new System.Drawing.Point(613, 58);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(100, 24);
             this.searchBtn.TabIndex = 1;
@@ -96,7 +96,7 @@
             this.dgvFilms.RowTemplate.Height = 24;
             this.dgvFilms.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvFilms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFilms.Size = new System.Drawing.Size(690, 391);
+            this.dgvFilms.Size = new System.Drawing.Size(576, 391);
             this.dgvFilms.TabIndex = 2;
             this.dgvFilms.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFilms_CellMouseEnter);
             this.dgvFilms.DoubleClick += new System.EventHandler(this.dgvFilms_DoubleClick);
@@ -142,7 +142,7 @@
             // 
             // AddBtn
             // 
-            this.AddBtn.Location = new System.Drawing.Point(724, 228);
+            this.AddBtn.Location = new System.Drawing.Point(613, 228);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(91, 33);
             this.AddBtn.TabIndex = 3;
@@ -153,7 +153,7 @@
             // 
             // EditBtn
             // 
-            this.EditBtn.Location = new System.Drawing.Point(827, 228);
+            this.EditBtn.Location = new System.Drawing.Point(716, 228);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(91, 33);
             this.EditBtn.TabIndex = 4;
@@ -164,7 +164,7 @@
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(780, 276);
+            this.deleteBtn.Location = new System.Drawing.Point(669, 276);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(91, 33);
             this.deleteBtn.TabIndex = 6;
@@ -182,7 +182,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(941, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(833, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -257,14 +257,14 @@
             this.comboBox1.Items.AddRange(new object[] {
             "by Name",
             "by Rating"});
-            this.comboBox1.Location = new System.Drawing.Point(829, 58);
+            this.comboBox1.Location = new System.Drawing.Point(718, 58);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 24);
             this.comboBox1.TabIndex = 8;
             // 
             // searchOMovieBtn
             // 
-            this.searchOMovieBtn.Location = new System.Drawing.Point(724, 106);
+            this.searchOMovieBtn.Location = new System.Drawing.Point(613, 106);
             this.searchOMovieBtn.Name = "searchOMovieBtn";
             this.searchOMovieBtn.Size = new System.Drawing.Size(205, 23);
             this.searchOMovieBtn.TabIndex = 10;
@@ -280,7 +280,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 434);
+            this.ClientSize = new System.Drawing.Size(833, 434);
             this.Controls.Add(this.searchOMovieBtn);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.menuStrip1);
