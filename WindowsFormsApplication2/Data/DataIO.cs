@@ -22,7 +22,7 @@ namespace CPP.CS.CS408.FilmLib
         /// </summary>
         /// <param name="DBToStore"></param>
         /// <param name="FileName"></param>
-        public void SaveToFile(SortableBindingList<Film> DBToStore, string FileName)
+        public static void SaveToFile(SortableBindingList<Film> DBToStore, string FileName)
         {
             XmlSerializer ser = new XmlSerializer(typeof(SortableBindingList<Film>));
             var serializer = new XmlSerializer(typeof(SortableBindingList<Film>));
@@ -36,7 +36,7 @@ namespace CPP.CS.CS408.FilmLib
         /// </summary>
         /// <param name="FileName"></param>
         /// <returns></returns>
-        public SortableBindingList<Film> LoadFromFile(string FileName)
+        public static SortableBindingList<Film> LoadFromFile(string FileName)
         {
             XmlSerializer ser = new XmlSerializer(typeof(SortableBindingList<Film>));
             try 
@@ -51,7 +51,7 @@ namespace CPP.CS.CS408.FilmLib
             return null;
         }
 
-        public void SaveToText(SortableBindingList<Film> bs, string fileName)
+        public static void SaveToText(SortableBindingList<Film> bs, string fileName)
         {
             foreach (Film film in bs)
             {

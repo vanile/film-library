@@ -71,7 +71,6 @@ namespace CPP.CS.CS408.FilmLib
             dgvOFilms.Columns.Add(col0);
             dgvOFilms.Columns.Add(col2);
             dgvOFilms.Columns.Add(col1);
-            
         }
 
         /// <summary>
@@ -103,6 +102,7 @@ namespace CPP.CS.CS408.FilmLib
             ApiSearchResponse<MovieInfo> response = await movieAPI.SearchByTitleAsync(searchBox.Text, pageNumber);
 
             bs.Clear();
+
             foreach (MovieInfo info in response.Results)
             {
                 Film film = new Film();
@@ -150,8 +150,8 @@ namespace CPP.CS.CS408.FilmLib
         /// <param name="e"></param>
         private void dgvOFilms_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Film dog = (Film)dgvOFilms.CurrentRow.DataBoundItem;
-            new OMovieViewWindow(dog, form).Show();
+            Film cFilm = (Film)dgvOFilms.CurrentRow.DataBoundItem;
+            new OMovieViewWindow(cFilm, form).Show();
         }
 
         /// <summary>
@@ -162,8 +162,8 @@ namespace CPP.CS.CS408.FilmLib
         /// <param name="e"></param>
         private void viewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Film dog = (Film)dgvOFilms.CurrentRow.DataBoundItem;
-            new OMovieViewWindow(dog, form).Show();
+            Film cFilm = (Film)dgvOFilms.CurrentRow.DataBoundItem;
+            new OMovieViewWindow(cFilm, form).Show();
         }
 
         /// <summary>
@@ -176,8 +176,8 @@ namespace CPP.CS.CS408.FilmLib
         {
             try
             {
-                Film dog = (Film)dgvOFilms.CurrentRow.DataBoundItem;
-                form.addFilm(dog);
+                Film cFilm = (Film)dgvOFilms.CurrentRow.DataBoundItem;
+                form.addFilm(cFilm);
             }
             catch (NullReferenceException) { }
     
@@ -191,8 +191,8 @@ namespace CPP.CS.CS408.FilmLib
         /// <param name="e"></param>
         private void openPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Film dog = (Film)dgvOFilms.CurrentRow.DataBoundItem;
-            System.Diagnostics.Process.Start(OMovieViewWindow.TmdbUrlMovieTitle + dog.tmdbID);
+            Film cFilm = (Film)dgvOFilms.CurrentRow.DataBoundItem;
+            System.Diagnostics.Process.Start(Film.TmdbUrlMovieTitle + cFilm.tmdbID);
         }
     }
 }

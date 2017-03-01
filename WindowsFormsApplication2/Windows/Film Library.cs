@@ -24,14 +24,12 @@ namespace CPP.CS.CS408.FilmLib
 
         private bool searchCleared;
 
-        private DataIO data;
         
         public FilmLibraryWindow()
         {
             InitializeComponent();
             this.CenterToScreen();
             searchCleared = false;
-            data = new DataIO();
             comboBox1.SelectedIndex = 0;
 
             setColumns();
@@ -126,11 +124,11 @@ namespace CPP.CS.CS408.FilmLib
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            Film dog = (Film)dgvFilms.CurrentRow.DataBoundItem;
+            Film cFilm = (Film)dgvFilms.CurrentRow.DataBoundItem;
 
-            using (AddWindow form = new AddWindow("Edit Film", dog) { film = dog })
+            using (AddWindow form = new AddWindow("Edit Film", cFilm) { film = cFilm })
             {
-                if (form.ShowDialog() == DialogResult.OK) { bs[bs.IndexOf(dog)] = form.film; }
+                if (form.ShowDialog() == DialogResult.OK) { bs[bs.IndexOf(cFilm)] = form.film; }
             }
             save();
         }
@@ -143,11 +141,11 @@ namespace CPP.CS.CS408.FilmLib
         /// <param name="e"></param>
         private void dgvFilms_DoubleClick(object sender, EventArgs e)
         {
-            Film dog = (Film)dgvFilms.CurrentRow.DataBoundItem;
+            Film cFilm = (Film)dgvFilms.CurrentRow.DataBoundItem;
 
-            using (AddWindow form = new AddWindow("Edit Film", dog) { film = dog })
+            using (AddWindow form = new AddWindow("Edit Film", cFilm) { film = cFilm })
             {
-                if (form.ShowDialog() == DialogResult.OK) { bs[bs.IndexOf(dog)] = form.film; }
+                if (form.ShowDialog() == DialogResult.OK) { bs[bs.IndexOf(cFilm)] = form.film; }
             }
             save();
         }
@@ -197,11 +195,11 @@ namespace CPP.CS.CS408.FilmLib
         /// <param name="e"></param>
         private void editToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
-            Film dog = (Film)dgvFilms.CurrentRow.DataBoundItem;
+            Film cFilm = (Film)dgvFilms.CurrentRow.DataBoundItem;
 
-            using (AddWindow form = new AddWindow("Edit Film", dog) { film = dog})
+            using (AddWindow form = new AddWindow("Edit Film", cFilm) { film = cFilm})
             {
-                if (form.ShowDialog() == DialogResult.OK) { bs[bs.IndexOf(dog)] = form.film; }
+                if (form.ShowDialog() == DialogResult.OK) { bs[bs.IndexOf(cFilm)] = form.film; }
             }
             save();
         }
@@ -229,13 +227,12 @@ namespace CPP.CS.CS408.FilmLib
         {
             if (currentFile != null)
             {
-                data.SaveToFile(bs, currentFile);
+                DataIO.SaveToFile(bs, currentFile);
             }
             else
             {
-                data.SaveToFile(bs, "filmLibraryData.xml");
-            }
-            
+                DataIO.SaveToFile(bs, "filmLibraryData.xml");
+            }  
         }
 
         /// <summary>
@@ -244,7 +241,7 @@ namespace CPP.CS.CS408.FilmLib
         private void load()
         {
             SortableBindingList<Film> loaded = new SortableBindingList<Film>();
-            loaded = data.LoadFromFile("filmLibraryData.xml");
+            loaded = DataIO.LoadFromFile("filmLibraryData.xml");
 
             if (loaded != null)
             {
@@ -256,7 +253,7 @@ namespace CPP.CS.CS408.FilmLib
         private void export(string fileName)
         {
             fileName = fileName + ".txt";
-            data.SaveToText(bs, fileName);
+            DataIO.SaveToText(bs, fileName);
         }
 
         /// <summary>
@@ -275,7 +272,7 @@ namespace CPP.CS.CS408.FilmLib
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
-                data.SaveToFile(bs, saveDialog.FileName);
+                DataIO.SaveToFile(bs, saveDialog.FileName);
             }
         }
 
@@ -380,7 +377,7 @@ namespace CPP.CS.CS408.FilmLib
                     string fileName = openDialog.FileName;
                     currentFile = fileName;
                     strm.Close();
-                    bs = data.LoadFromFile(fileName);
+                    bs = DataIO.LoadFromFile(fileName);
                     dgvFilms.DataSource = bs;
                 }
             }

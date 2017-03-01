@@ -17,7 +17,6 @@ namespace CPP.CS.CS408.FilmLib
     public partial class AddWindow : Form
     {
         public Film film { get; set; }
-        private const string TmdbUrlMovieTitle = "https://www.themoviedb.org/movie/";
 
         /// <summary>
         /// This constructor is called if the user is adding
@@ -111,6 +110,7 @@ namespace CPP.CS.CS408.FilmLib
             film.Name = nameBox.Text;
             film.Rating = rating;
             film.Comments = commentsBox.Text;
+
             if (comboBox1.SelectedIndex == 0) { }
             else 
             { 
@@ -162,7 +162,7 @@ namespace CPP.CS.CS408.FilmLib
         /// <param name="e"></param>
         private void viewOBtn_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(TmdbUrlMovieTitle + film.tmdbID);
+            System.Diagnostics.Process.Start(Film.TmdbUrlMovieTitle + film.tmdbID);
         }
 
         /// <summary>

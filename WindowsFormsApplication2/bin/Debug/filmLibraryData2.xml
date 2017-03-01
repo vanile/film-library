@@ -109,4 +109,14 @@
     <DateWatched>0001-01-01T00:00:00</DateWatched>
     <ReleaseDate>2014-06-18T00:00:00</ReleaseDate>
   </Film>
+  <Film>
+    <Name>yes</Name>
+    <Description />
+    <Comments />
+    <FilmStatus>In Queue</FilmStatus>
+    <Rating>0</Rating>
+    <tmdbID>0</tmdbID>
+    <DateWatched>0001-01-01T00:00:00</DateWatched>
+    <ReleaseDate>0001-01-01T00:00:00</ReleaseDate>
+  </Film>
 </ArrayOfFilm>

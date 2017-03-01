@@ -21,9 +21,6 @@ namespace CPP.CS.CS408.FilmLib
         private Film film;
 
         private FilmLibraryWindow form;
-
-        public const string TmdbUrlMovieTitle = "https://www.themoviedb.org/movie/";
-        public const string TmdbImgUrl = "https://image.tmdb.org/t/p/original";
         
         public OMovieViewWindow(Film nFilm, FilmLibraryWindow nForm)
         {
